@@ -47,12 +47,13 @@ export function Footer({ lang }: FooterProps) {
               <span className="text-[10px] font-mono text-muted uppercase tracking-wider block mb-1">
                 {lang === "fr" ? "Signature certifiée de l'ingénieur :" : "Certified Engineer Signature:"}
               </span>
-              <div className="relative w-40 h-12">
+              <div className="relative w-40 h-12 overflow-hidden">
                 <Image
                   src={profile.signatureSrc}
                   alt="Signature Benjamin MUGANGU"
-                  fill
-                  className="object-contain object-left dark:invert-0 opacity-80"
+                  width={160}
+                  height={48}
+                  className="object-contain object-left dark:invert-0 opacity-80 max-h-12 w-auto"
                 />
               </div>
             </div>
